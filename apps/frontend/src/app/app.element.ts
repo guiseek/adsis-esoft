@@ -1,10 +1,10 @@
-import { UserDataService, UserMockService, UserService } from './services';
+import { UserDataService, UserMockService, UserService } from './user/services';
 import userTableRow from './user/user-table-row.element.html?raw';
-import { setProvider, useProvider } from './core/provider';
 import template from './app.element.html?raw';
 import { swap, swapMany } from './core';
 import { env } from '../envs/env';
 import './app.element.scss';
+import { setProvider, useProvider } from '@adsis-esoft/common/utilities';
 
 setProvider(UserService, !env.production ? UserDataService : UserMockService);
 

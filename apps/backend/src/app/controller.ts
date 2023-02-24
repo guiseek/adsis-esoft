@@ -1,7 +1,7 @@
 import { PathArgs } from '@adsis-esoft/common/interfaces';
 import { Router, Request, Response } from 'express';
 
-class Ctrl {
+class Controller {
   router: Router = Router();
 
   get<P extends string>(
@@ -47,4 +47,4 @@ class Ctrl {
   }
 }
 
-export const ctrl = new Ctrl();
+export const controller = new Controller();

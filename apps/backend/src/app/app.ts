@@ -1,6 +1,6 @@
 import express, { Router, json, Handler } from 'express';
-import { ctrl } from './ctrl';
-import './user/ctrl';
+import { controller } from './controller';
+import './user/controller';
 
 export class App {
   private server = express();
@@ -18,12 +18,13 @@ export class App {
   }
 }
 
-ctrl.get('/api', (req, res) => {
+controller.get('/api', (req, res) => {
   res.send({ message: 'Welcome to backend!' });
 });
 
 const app = new App();
-app.useRouter(ctrl.router);
+app.useRouter(controller.router);
 app.useMiddleware(json());
+
 
 export { app };
