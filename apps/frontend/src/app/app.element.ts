@@ -120,10 +120,10 @@ export class AppElement extends HTMLElement {
      * E desta forma, bastaria fazer algo como isso
      *
      * ```example
-     * Disso 👇
+     * Enquanto usar API REST use 👇
      * provider.add(Service, HttpService, [API_TOKEN]);
      *
-     * Pra isso 👇
+     * Em migração pra Socket use 👇
      * provider.add(Service, SocketService, [API_TOKEN]);
      *
      * E pronto, todos os Services da aplicação agora
