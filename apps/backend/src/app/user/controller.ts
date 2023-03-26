@@ -1,10 +1,12 @@
-import { setProvider, useProvider } from '@adsis-esoft/common/utilities';
+// import { setProvider, useProvider } from '@adsis-esoft/common/utilities';
+import { provider } from '@adsis-esoft/common/utilities';
 import { controller } from '../controller';
 import { UserMockService, UserService } from './services';
 
-setProvider(UserService, UserMockService);
+provider.add(UserService, UserMockService);
+// setProvider(UserService, UserMockService);
 
-const service = useProvider(UserService);
+const service = provider.use(UserService);
 
 controller.get('/api/users', (req, res) => {
   service.findAll().then((users) => {

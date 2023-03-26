@@ -1,6 +1,7 @@
 import { User } from '@adsis-esoft/common/interfaces';
+import { Observable } from 'rxjs';
 
 export abstract class UserService {
-  abstract findAll(): Promise<User[]>;
-  abstract findOne(id: number): Promise<User>;
+  abstract findAll(): Observable<User[]>;
+  abstract findOne(id: number): Observable<User>;
 }

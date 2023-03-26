@@ -1,25 +1,26 @@
 import { User } from '@adsis-esoft/common/interfaces';
 import { UserService } from './ports/user.service';
+import { of } from 'rxjs';
 
 const USERS_MOCK: User[] = [
   {
     id: 0,
-    name: 'Gui',
+    name: 'Gui Mock',
   },
   {
     id: 1,
-    name: 'Thiago',
+    name: 'Erick Mock',
   },
 ];
 
 export class UserMockService implements UserService {
-  async findAll(): Promise<User[]> {
-    return Promise.resolve(USERS_MOCK);
+  findAll() {
+    return of(USERS_MOCK);
   }
 
-  async findOne(id: number): Promise<User> {
+  findOne(id: number) {
     const user = USERS_MOCK.find((user) => user.id === id);
     if (!user) throw 'User not found';
-    return Promise.resolve(user);
+    return of(user);
   }
 }
