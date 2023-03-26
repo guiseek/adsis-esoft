@@ -86,40 +86,18 @@ export class AppElement extends HTMLElement {
     let tmpl = swap(template, 'title', 'ADSis & ESoft');
 
     const data = await fetch('/api').then((res) => res.json());
-
     this.innerHTML = swap(tmpl, 'response', data.message);
 
-    // const tbody = this.querySelector<HTMLTableSectionElement>('#users tbody');
     const usersEl = this.querySelector<HTMLElement>('#users')!;
 
     /**
      * Aqui fazemos o findAll() e temos nossos usuários,
      * não importa quais sejam e nem como chegam até aqui
-     *
      */
     userService.findAll().subscribe((users) => {
-      console.log(users);
-
       usersEl.innerHTML = swap(usersEl.innerHTML, 'total', users.length);
-
       const usersCard = usersEl.querySelector<HTMLElement>('section');
-      // if (tbody) tbody.innerHTML = swapMany(userTableRow, users);
-      if (usersCard) {
-        usersCard.innerHTML += swapMany(
-          `<details>
-            <summary>
-              <object data="./prompt.svg"></object>
-              {{name}}
-            </summary>
-
-            <p>
-              <strong> {{name}} </strong> é o usuário número <strong>#{{id}}</strong>
-            </p>
-
-          </details>`,
-          users
-        );
-      }
+      if (usersCard) usersCard.innerHTML += swapMany(userTableRow, users);
     });
 
     /**
