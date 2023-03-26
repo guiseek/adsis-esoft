@@ -31,8 +31,8 @@ const API_TOKEN = new Token('api.token');
  * Tem também um terceiro parâmetro é usado pra,
  * dependências ou seja, coisas que o provider
  * precisa em seu construtor, e neste caso
- * é a URL da API que foi configurada aqui 👇
- * e utilizada logo mais abaixo
+ * é o API_TOKEN que foi configurada logo
+ * aqui em baixo 👇 com a url do backend
  */
 
 // URL da API REST
@@ -45,8 +45,8 @@ provider.add(API_TOKEN, '/api');
  *
  * ```example
  * class HttpService<T> implements Service<T> {
- *                       👇
  *   constructor(private api: string) {}
+ *   Ó a danada da URL ó ☝️
  * }
  * ```
  */
