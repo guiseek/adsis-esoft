@@ -333,11 +333,13 @@ pre {
   text-decoration: underline;
 }
 
+#users,
 #commands {
   padding: 2.5rem 2rem;
 
   margin-top: 3.5rem;
 }
+#users h2,
 #commands h2 {
   font-size: 1.25rem;
   font-weight: 400;
@@ -346,6 +348,7 @@ pre {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+#users p,
 #commands p {
   font-size: 1rem;
   font-weight: 300;
@@ -380,7 +383,8 @@ summary {
 summary:hover {
   background-color: rgba(243, 244, 246, 1);
 }
-summary svg {
+summary svg,
+summary object {
   height: 1.5rem;
   margin-right: 1rem;
   width: 1.5rem;
