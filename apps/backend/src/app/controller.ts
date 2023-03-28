@@ -1,4 +1,4 @@
-import { PathArgs } from '@adsis-esoft/common/interfaces';
+import { PathArgs } from '@adsis-esoft/shared/api-interfaces';
 import { Router, Request, Response } from 'express';
 
 class Controller {

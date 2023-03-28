@@ -5,4 +5,4 @@ export type PathParams<Path extends string> =
     ? Param
     : Path extends `${infer Prefix}:${infer Rest}`
     ? PathParams<`:${Rest}`>
-    : never
+    : never;

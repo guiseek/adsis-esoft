@@ -1,4 +1,4 @@
-import { User } from '@adsis-esoft/common/interfaces';
+import { User } from '@adsis-esoft/shared/api-interfaces';
 import { Observable } from 'rxjs';
 
 export abstract class UserService {

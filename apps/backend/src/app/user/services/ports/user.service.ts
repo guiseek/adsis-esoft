@@ -1,4 +1,4 @@
-import { User } from '@adsis-esoft/common/interfaces';
+import { User } from '@adsis-esoft/shared/api-interfaces';
 
 export abstract class UserService {
   abstract findAll(): Promise<User[]>;

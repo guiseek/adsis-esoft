@@ -1,4 +1,4 @@
-import { User } from '@adsis-esoft/common/interfaces';
+import { User } from '@adsis-esoft/shared/api-interfaces';
 import { UserService } from '../ports/user.service';
 import { UserFacade } from '../ports/user.facade';
 import { BehaviorSubject } from 'rxjs';

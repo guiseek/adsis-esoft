@@ -1,5 +1,5 @@
 import { Service } from '@adsis-esoft/shared/data-access';
-import { User } from '@adsis-esoft/common/interfaces';
+import { User } from '@adsis-esoft/shared/api-interfaces';
 import { UserService } from '../ports/user.service';
 
 export class UserDataServiceImpl implements UserService {
