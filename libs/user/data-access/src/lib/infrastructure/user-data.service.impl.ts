@@ -1,4 +1,4 @@
-import { Service } from '@adsis-esoft/common/data-access';
+import { Service } from '@adsis-esoft/shared/data-access';
 import { User } from '@adsis-esoft/common/interfaces';
 import { UserService } from '../ports/user.service';
 

@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@adsis-esoft/common/data-access": [
-        "libs/common/data-access/src/index.ts"
-      ],
       "@adsis-esoft/common/interfaces": ["libs/common/interfaces/src/index.ts"],
       "@adsis-esoft/common/utilities": ["libs/common/utilities/src/index.ts"],
+      "@adsis-esoft/shared/data-access": [
+        "libs/shared/data-access/src/index.ts"
+      ],
       "@adsis-esoft/user/data-access": ["libs/user/data-access/src/index.ts"]
     }
   },

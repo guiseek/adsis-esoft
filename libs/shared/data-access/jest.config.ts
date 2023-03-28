@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'common-data-access',
+  displayName: 'shared-data-access',
   preset: '../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +11,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/libs/common/data-access',
+  coverageDirectory: '../../../coverage/libs/shared/data-access',
 };
