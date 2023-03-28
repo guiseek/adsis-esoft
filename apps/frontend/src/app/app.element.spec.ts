@@ -1,13 +1,17 @@
-import { UserMockService, UserService } from './user/services';
+import {
+  UserService,
+  UserMockServiceImpl,
+} from '@adsis-esoft/user/data-access';
 import { provider } from '@adsis-esoft/common/utilities';
 import { AppElement } from './app.element';
+import './app.provider';
 
 describe('AppElement', () => {
   let app: AppElement;
 
-  provider.add(UserService, UserMockService);
+  provider.add(UserService, UserMockServiceImpl);
 
-  beforeEach(() => {
+  beforeAll(() => {
     app = new AppElement();
   });
 

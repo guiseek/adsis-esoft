@@ -1,6 +1,11 @@
 import { HttpAjaxService, Service } from '@adsis-esoft/common/data-access';
 import { Token, provider } from '@adsis-esoft/common/utilities';
-import { UserDataService, UserService } from './user/services';
+import {
+  UserDataServiceImpl,
+  UserFacadeImpl,
+  UserService,
+  UserFacade,
+} from '@adsis-esoft/user/data-access';
 
 /**
  * Injeção de dependência / Inversão de controle
@@ -32,11 +37,18 @@ provider.add(Service, HttpAjaxService, [API_TOKEN]);
 
 /**
  * Reistra UserService como identificador e
- * UserDataService como implementação atual
- * Informa Service como dependência exigida
- * para que UserDataService possa funcionar
+ * UserDataServiceImpl como implementação e
+ * informa Service como dependência exigida
+ * para que UserDataServiceImpl funcione
  */
-provider.add(UserService, UserDataService, [Service]);
-
+provider.add(UserService, UserDataServiceImpl, [Service]);
 // Para substituição de implementação para Mock de testes
 // provider.add(UserService, UserMockService, [Service]);
+
+/**
+ * Reistra UserFacade como identificador e
+ * UserFacadeImpl como implementação e
+ * informa UserService como dependência
+ * para que UserFacadeImpl funcione
+ */
+provider.add(UserFacade, UserFacadeImpl, [UserService]);

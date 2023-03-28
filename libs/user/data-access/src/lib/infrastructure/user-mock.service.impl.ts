@@ -1,5 +1,5 @@
 import { User } from '@adsis-esoft/common/interfaces';
-import { UserService } from './ports/user.service';
+import { UserService } from '../ports/user.service';
 import { of } from 'rxjs';
 
 const USERS_MOCK: User[] = [
@@ -13,7 +13,7 @@ const USERS_MOCK: User[] = [
   },
 ];
 
-export class UserMockService implements UserService {
+export class UserMockServiceImpl implements UserService {
   findAll() {
     return of(USERS_MOCK);
   }
