@@ -15,12 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@adsis-esoft/common/utilities": ["libs/common/utilities/src/index.ts"],
       "@adsis-esoft/shared/api-interfaces": [
         "libs/shared/api-interfaces/src/index.ts"
       ],
       "@adsis-esoft/shared/data-access": [
         "libs/shared/data-access/src/index.ts"
+      ],
+      "@adsis-esoft/shared/util-provider": [
+        "libs/shared/util-provider/src/index.ts"
       ],
       "@adsis-esoft/user/data-access": ["libs/user/data-access/src/index.ts"]
     }

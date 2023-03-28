@@ -1,7 +1,7 @@
 import userTableRow from './user/user-table-row.element.html?raw';
 import template from './app.element.html?raw';
 
-import { provider } from '@adsis-esoft/common/utilities';
+import { provider } from '@adsis-esoft/shared/util-provider';
 import { UserFacade } from '@adsis-esoft/user/data-access';
 import { swap, swapMany } from './core';
 import './app.element.scss';

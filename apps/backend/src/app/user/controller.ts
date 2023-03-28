@@ -1,5 +1,5 @@
 // import { setProvider, useProvider } from '@adsis-esoft/common/utilities';
-import { provider } from '@adsis-esoft/common/utilities';
+import { provider } from '@adsis-esoft/shared/util-provider';
 import { controller } from '../controller';
 import { UserMockService, UserService } from './services';
 

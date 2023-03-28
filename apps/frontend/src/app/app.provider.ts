@@ -1,5 +1,5 @@
 import { HttpAjaxService, Service } from '@adsis-esoft/shared/data-access';
-import { Token, provider } from '@adsis-esoft/common/utilities';
+import { Token, provider } from '@adsis-esoft/shared/util-provider';
 import {
   UserDataServiceImpl,
   UserFacadeImpl,

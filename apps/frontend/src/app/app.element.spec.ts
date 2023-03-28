@@ -2,7 +2,7 @@ import {
   UserService,
   UserMockServiceImpl,
 } from '@adsis-esoft/user/data-access';
-import { provider } from '@adsis-esoft/common/utilities';
+import { provider } from '@adsis-esoft/shared/util-provider';
 import { AppElement } from './app.element';
 import './app.provider';
 
