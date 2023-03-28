@@ -1,7 +1,7 @@
 import { Service } from './ports/service';
 import { from } from 'rxjs';
 
-export class HttpService<T> implements Service<T> {
+export class HttpFetchService<T> implements Service<T> {
   constructor(private api: string) {}
 
   findAll(endpoint: string) {
