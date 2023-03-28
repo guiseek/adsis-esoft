@@ -1,33 +1,28 @@
-import { HttpFetchService } from './http-fetch.service';
-
-Object.defineProperty(window, 'fetch', {
-  value: async (input: string, config = {}) => ({
-    async json() {
-      return {};
-    },
-    async text() {
-      return {};
-    },
-  }),
-});
+import { HttpAjaxService } from './http-ajax.service';
+import { Observable } from 'rxjs';
 
 describe('HttpService', () => {
-  let service: HttpFetchService<any>;
+  let service: HttpAjaxService<any>;
 
   beforeEach(() => {
-    service = new HttpFetchService('/api');
+    service = new HttpAjaxService('/api');
   });
 
-  it('should work', () => {
-    expect(service).toBeInstanceOf(HttpFetchService);
+  it('deve instanciar', () => {
+    expect(service).toBeInstanceOf(HttpAjaxService);
   });
 
-  it('should work', () => {
-    const findAll$ = service.findAll('');
-    jest.spyOn(findAll$, 'subscribe');
+  it('deve retornar um observable', () => {
+    const findAll$ = service.findAll('test');
+    expect(findAll$).toBeInstanceOf(Observable);
+  });
 
-    findAll$.subscribe((value) => {
-      console.log(value);
+  it('deve retornar um objeto', () => {
+    const findOne$ = service.findOne('test', 0);
+    jest.spyOn(findOne$, 'subscribe');
+
+    findOne$.subscribe((value) => {
+      expect(value).toStrictEqual({});
     });
   });
 });
