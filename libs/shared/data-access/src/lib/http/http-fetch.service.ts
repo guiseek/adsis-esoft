@@ -1,4 +1,4 @@
-import { Service } from './ports/service';
+import { Service } from '@adsis-esoft/shared/api-interfaces';
 import { from } from 'rxjs';
 
 export class HttpFetchService<T> implements Service<T> {

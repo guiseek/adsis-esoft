@@ -1,5 +1,5 @@
+import { Service } from '@adsis-esoft/shared/api-interfaces';
 import { AjaxResponse, ajax } from 'rxjs/ajax';
-import { Service } from './ports/service';
 import { map } from 'rxjs';
 
 const pickResponse = <T>({ response }: AjaxResponse<T>) => response;
