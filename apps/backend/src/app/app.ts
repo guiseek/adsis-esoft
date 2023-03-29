@@ -26,5 +26,4 @@ const app = new App();
 app.useRouter(controller.router);
 app.useMiddleware(json());
 
-
 export { app };

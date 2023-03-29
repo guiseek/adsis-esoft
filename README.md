@@ -3,6 +3,7 @@
 ## Executando
 
 ### Apenas o backend
+
 ```sh
 nx serve backend
 ```
@@ -19,7 +20,6 @@ nx serve frontend
 nx run-many --target serve --parallel
 ```
 
-
 ## Entendendo o repositório
 
 Para ver o diagrama com relacionamento de dependências entre os projetos, execute
@@ -33,7 +33,6 @@ nx graph
 ## Remote caching
 
 Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and make CI faster.
-
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
