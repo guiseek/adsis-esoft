@@ -1,6 +1,6 @@
 import { PathArgs } from '@adsis-esoft/shared/api-interfaces';
 import { Router, Request, Response } from 'express';
-import './providers';
+import '../providers';
 
 class Controller {
   router: Router = Router();

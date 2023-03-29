@@ -1,8 +1,8 @@
 import { Token, provider } from '@adsis-esoft/shared/util-provider';
 import { UserService } from '@adsis-esoft/shared/api-interfaces';
 import { UserDataServiceImpl, UserMockServiceImpl } from './user/services';
+import { mongo } from './core/mongo';
 import { Schema } from 'mongoose';
-import { mongo } from './mongo';
 
 const MONGO_CONFIG_TOKEN = new Token('mongo.config');
 const MONGO_CONNECTION_TOKEN = new Token('mongo.connection');

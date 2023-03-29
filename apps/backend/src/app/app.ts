@@ -1,5 +1,5 @@
 import express, { Router, json, Handler } from 'express';
-import { controller } from './controller';
+import { controller } from './core/controller';
 import './user/controller';
 
 export class App {
