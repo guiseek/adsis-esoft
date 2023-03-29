@@ -46,7 +46,9 @@
     "axios": "^1.0.0",
     "core-js": "^3.6.5",
     "express": "^4.18.1",
+    "mongoose": "^7.0.3",
     "regenerator-runtime": "0.13.7",
+    "rxjs": "^7.8.0",
     "tslib": "^2.3.0"
   }
 }
