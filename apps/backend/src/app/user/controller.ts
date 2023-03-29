@@ -1,19 +1,14 @@
-// import { setProvider, useProvider } from '@adsis-esoft/common/utilities';
+import { UserService } from '@adsis-esoft/shared/api-interfaces';
 import { provider } from '@adsis-esoft/shared/util-provider';
 import { controller } from '../controller';
-import { UserMockService, UserService } from './services';
-
-provider.add(UserService, UserMockService);
-// setProvider(UserService, UserMockService);
+import { handler } from '../handler';
 
 const service = provider.use(UserService);
 
 controller.get('/api/users', (req, res) => {
-  service.findAll().then((users) => {
-    res.json(users);
-  });
+  handler(res, service.findAll());
 });
 
 controller.get('/api/users/:id', ({ params }, res) => {
-  service.findOne(+params.id).then((user) => res.json(user));
+  handler(res, service.findOne(+params.id));
 });
